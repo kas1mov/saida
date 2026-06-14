@@ -1499,5 +1499,30 @@
 
     })();
     </script>
+    <script>
+if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+    const style = document.createElement("style");
+    style.innerHTML = `
+    .ambient-orb,
+    .heart-aura,
+    .heart-sparkle,
+    .gift-orbit-heart,
+    .music-note {
+        display:none!important;
+    }
+
+    * {
+        backdrop-filter:none!important;
+        -webkit-backdrop-filter:none!important;
+        filter:none!important;
+    }
+
+    canvas {
+        display:none!important;
+    }
+    `;
+    document.head.appendChild(style);
+}
+</script>
 </body>
 </html>
